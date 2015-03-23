@@ -1,13 +1,14 @@
-
 //
-//  Created by HeQingshan－Air on 15/2/8.
+//  UIView+SizeAndRectAdditions.h
+//  BaseProject
+//
+//  Created by qingshan on 15/3/23.
 //  Copyright (c) 2015年 HQS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIView (TTCategory)
+@interface UIView (SizeAndRectAdditions)
 
 @property(nonatomic) CGFloat left;
 @property(nonatomic) CGFloat top;
@@ -62,4 +63,5 @@
 - (void)addSubviews:(NSArray *)views;
 
 + (UILabel *)labelWithFrame:(CGRect)frame fontSize:(CGFloat)fontSize textAlignment:(NSTextAlignment)alignment text:(NSString *)text;
+
 @end

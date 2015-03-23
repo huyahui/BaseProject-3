@@ -17,6 +17,7 @@ extern NSString* const REG_CHINESE;
 @interface StringUtilities : NSObject
 
 +(BOOL)isNumberStr:(NSString *)_text;
++(BOOL)isPureFloat:(NSString*)string;
 +(BOOL)isZeroNum:(NSInteger)characterAtIndex;
 +(BOOL)isChineseValue:(NSString *)input;
 +(BOOL)isEmail:(NSString *)input;

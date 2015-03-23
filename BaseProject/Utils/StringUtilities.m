@@ -183,6 +183,12 @@ NSString* const REG_ENGLISH = @"^[A-Za-z0-9]+$";
     return YES;
 }
 
++(BOOL)isPureFloat:(NSString*)string {
+    NSScanner* scan = [NSScanner scannerWithString:string];
+    float val;
+    return[scan scanFloat:&val] && [scan isAtEnd];
+}
+
 + (BOOL)isNum:(NSInteger)characterAtIndex {
     if(48 <= characterAtIndex  && characterAtIndex <= 57) {
         return YES;

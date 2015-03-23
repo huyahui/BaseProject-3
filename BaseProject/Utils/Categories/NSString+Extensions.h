@@ -24,3 +24,8 @@
 
 
 @end
+
+@interface NSString (ParseCategory)
+- (NSMutableDictionary *)explodeToDictionaryInnerGlue:(NSString *)innerGlue
+                                           outterGlue:(NSString *)outterGlue;
+@end

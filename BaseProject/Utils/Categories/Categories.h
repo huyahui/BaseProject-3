@@ -9,10 +9,11 @@
 #ifndef BaseProject_Categories_h
 #define BaseProject_Categories_h
 
-#import "UIViewAdditions.h"
-#import "UIViewController+CommonUIViewController.h"
 #import "NSString+Extensions.h"
 #import "UIImage+Color.h"
 #import "UIImage+wiRoundedRectImage.h"
+#import "UIButton+EnlargeEdge.h"
+#import "NSDate+Category.h"
+#import "UIView+SizeAndRectAdditions.h"
 
 #endif
