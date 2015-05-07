@@ -8,7 +8,10 @@
 
 #import "TestEGOViewController.h"
 
-@interface TestEGOViewController ()
+@interface TestEGOViewController ()<LoadMoreTableViewDelegate,UITableViewDelegate,UITableViewDataSource>
+{
+    NSMutableArray *dataArray;
+}
 
 @end
 
@@ -16,22 +19,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    dataArray = [NSMutableArray arrayWithObjects:@"导航栏测试",@"MBProgressHUD测试",@"EGOTableViewPullRefresh测试", nil];
+    
+    myTableView = [[LoadMoreTableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH_FULL_SCREEN, HEIGHT_FULL_VIEW) style:UITableViewStylePlain];
+    if (IOS7_LATER) {
+        myTableView.separatorInset = UIEdgeInsetsZero;
+    }
+    myTableView.delegate = self;
+    myTableView.dataSource = self;
+    myTableView.loadMoreDelegate = self;
+    myTableView.loadMoreArrowImage = nil;
+    myTableView.tableFooterView = [[UIView alloc] init];
+    [self.view addSubview:myTableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return dataArray.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"test";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    if (indexPath.row < dataArray.count) {
+        cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
+    }
+    
+    return cell;
 }
-*/
+
+- (void)loadMoreTableViewDidTriggerLoadMore:(LoadMoreTableView*)loadMoreTableView
+{
+    [self performSelector:@selector(stopLoading) withObject:nil afterDelay:2];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
+-(void)stopLoading {
+    myTableView.loadMoreTableIsLoadingMore = NO;
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
 
 @end

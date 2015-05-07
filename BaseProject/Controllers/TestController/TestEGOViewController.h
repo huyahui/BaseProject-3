@@ -8,6 +8,8 @@
 
 #import "UIBaseViewController.h"
 
-@interface TestEGOViewController : UIBaseViewController
+@interface TestEGOViewController : UIBaseViewController {
+    LoadMoreTableView *myTableView;
+}
 
 @end

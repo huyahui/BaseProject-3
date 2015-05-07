@@ -10,7 +10,6 @@
 #import "TestEGOViewController.h"
 #import "TestMBProgressHUDViewController.h"
 #import "TestNavigationViewController.h"
-#import "RequestService.h"
 
 @interface TestViewController () {
     NSMutableArray *dataArray;
@@ -35,17 +34,6 @@
     myTableView.pullDelegate = self;
     myTableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:myTableView];
-    
-    RequestService *request = [[RequestService alloc] initRequest];
-    request.url = [NSString stringWithFormat:@"%@%@", kWebService_space, @"/app/Version.api"];
-    [request request:^(NSDictionary *dict, BOOL isSuccess) {
-        if (isSuccess) {
-            NSLog(@"dict:%@",dict);
-        }
-        else {
-            NSLog(@"Error");
-        }
-    }];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
