@@ -115,6 +115,9 @@
 		BA24D1151ABFDC42000F94F8 /* AMProgressViewGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = BA24D1131ABFDC42000F94F8 /* AMProgressViewGradient.m */; };
 		BA24D1181ABFDCD1000F94F8 /* UIView+SizeAndRectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA24D1171ABFDCD1000F94F8 /* UIView+SizeAndRectAdditions.m */; };
 		BA24D11C1ABFDED4000F94F8 /* MenuCated.m in Sources */ = {isa = PBXBuildFile; fileRef = BA24D11B1ABFDED4000F94F8 /* MenuCated.m */; };
+		BA8AD8141AFDDB070003CAB4 /* SMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8AD8131AFDDB070003CAB4 /* SMAlertView.m */; };
+		BA8AD81B1AFDDB600003CAB4 /* LeveyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8AD8181AFDDB600003CAB4 /* LeveyTabBar.m */; };
+		BA8AD81C1AFDDB600003CAB4 /* LeveyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8AD81A1AFDDB600003CAB4 /* LeveyTabBarController.m */; };
 		BABA16821AFBBC51005D1FE7 /* DataCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = BABA16551AFBBC51005D1FE7 /* DataCentre.m */; };
 		BABA16831AFBBC51005D1FE7 /* HttpInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BABA16571AFBBC51005D1FE7 /* HttpInfo.m */; };
 		BABA16841AFBBC51005D1FE7 /* MAppHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = BABA16591AFBBC51005D1FE7 /* MAppHttp.m */; };
@@ -183,11 +186,10 @@
 		02373D5B1A87A4BA00AB64E4 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		02373D5E1A87A7D800AB64E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		02373D601A87A7D800AB64E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		02373D611A87A7D800AB64E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02373D611A87A7D800AB64E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		02373D651A87A96200AB64E4 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		02373D661A87AA2E00AB64E4 /* FontMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontMacro.h; sourceTree = "<group>"; };
 		02373D671A87AA3A00AB64E4 /* ColorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
-		02373D681A87AA4700AB64E4 /* APIMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIMacro.h; sourceTree = "<group>"; };
 		02373D691A87AADC00AB64E4 /* ImageMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMacro.h; sourceTree = "<group>"; };
 		02373D6B1A87B26600AB64E4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		02373D6C1A87B26600AB64E4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -363,6 +365,13 @@
 		BA24D1171ABFDCD1000F94F8 /* UIView+SizeAndRectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SizeAndRectAdditions.m"; sourceTree = "<group>"; };
 		BA24D11A1ABFDED4000F94F8 /* MenuCated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCated.h; sourceTree = "<group>"; };
 		BA24D11B1ABFDED4000F94F8 /* MenuCated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCated.m; sourceTree = "<group>"; };
+		BA8AD8121AFDDB070003CAB4 /* SMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAlertView.h; sourceTree = "<group>"; };
+		BA8AD8131AFDDB070003CAB4 /* SMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAlertView.m; sourceTree = "<group>"; };
+		BA8AD8151AFDDB0E0003CAB4 /* Views.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Views.h; sourceTree = "<group>"; };
+		BA8AD8171AFDDB600003CAB4 /* LeveyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeveyTabBar.h; sourceTree = "<group>"; };
+		BA8AD8181AFDDB600003CAB4 /* LeveyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeveyTabBar.m; sourceTree = "<group>"; };
+		BA8AD8191AFDDB600003CAB4 /* LeveyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeveyTabBarController.h; sourceTree = "<group>"; };
+		BA8AD81A1AFDDB600003CAB4 /* LeveyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeveyTabBarController.m; sourceTree = "<group>"; };
 		BABA16541AFBBC51005D1FE7 /* DataCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCentre.h; sourceTree = "<group>"; };
 		BABA16551AFBBC51005D1FE7 /* DataCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCentre.m; sourceTree = "<group>"; };
 		BABA16561AFBBC51005D1FE7 /* HttpInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpInfo.h; sourceTree = "<group>"; };
@@ -465,7 +474,6 @@
 				02373CF41A876D5A00AB64E4 /* Libs */,
 				02373CF81A876D5A00AB64E4 /* Utils */,
 				02373CEC1A876D5A00AB64E4 /* Supporting Files */,
-				02373D611A87A7D800AB64E4 /* Images.xcassets */,
 			);
 			path = BaseProject;
 			sourceTree = "<group>";
@@ -491,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				02373D5C1A87A7D800AB64E4 /* Base.lproj */,
+				02373D611A87A7D800AB64E4 /* Images.xcassets */,
 				02373CF21A876D5A00AB64E4 /* Info.plist */,
 				02373CF31A876D5A00AB64E4 /* main.m */,
 				02373D591A87A0FD00AB64E4 /* App-Prefix.pch */,
@@ -545,7 +554,6 @@
 				02373D651A87A96200AB64E4 /* CommonMacro.h */,
 				02373D661A87AA2E00AB64E4 /* FontMacro.h */,
 				02373D671A87AA3A00AB64E4 /* ColorMacro.h */,
-				02373D681A87AA4700AB64E4 /* APIMacro.h */,
 				02373D691A87AADC00AB64E4 /* ImageMacro.h */,
 			);
 			path = Macros;
@@ -555,10 +563,10 @@
 			isa = PBXGroup;
 			children = (
 				BA24D1031ABFDBD4000F94F8 /* Views */,
+				02BB390F1A934C2F008F61D0 /* Categories */,
 				02BB39271A9351E4008F61D0 /* Utils.h */,
 				02BB39161A935036008F61D0 /* StringUtilities.h */,
 				02BB39171A935036008F61D0 /* StringUtilities.m */,
-				02BB390F1A934C2F008F61D0 /* Categories */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -572,6 +580,9 @@
 				02BB395C1A93A662008F61D0 /* CustomUITextField.m */,
 				BAFC289D1ADD255C00B3D6B6 /* AutoScrollView.h */,
 				BAFC289E1ADD255C00B3D6B6 /* AutoScrollView.m */,
+				BA8AD8121AFDDB070003CAB4 /* SMAlertView.h */,
+				BA8AD8131AFDDB070003CAB4 /* SMAlertView.m */,
+				BA8AD8151AFDDB0E0003CAB4 /* Views.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -928,6 +939,7 @@
 		BA24D1031ABFDBD4000F94F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA8AD8161AFDDB5F0003CAB4 /* LeveyTabbar */,
 				BA24D1191ABFDED4000F94F8 /* MenuCated */,
 				BA24D10F1ABFDC42000F94F8 /* AMProgressView */,
 				BA24D1041ABFDBD4000F94F8 /* PopupView */,
@@ -974,6 +986,17 @@
 				BA24D11B1ABFDED4000F94F8 /* MenuCated.m */,
 			);
 			path = MenuCated;
+			sourceTree = "<group>";
+		};
+		BA8AD8161AFDDB5F0003CAB4 /* LeveyTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				BA8AD8171AFDDB600003CAB4 /* LeveyTabBar.h */,
+				BA8AD8181AFDDB600003CAB4 /* LeveyTabBar.m */,
+				BA8AD8191AFDDB600003CAB4 /* LeveyTabBarController.h */,
+				BA8AD81A1AFDDB600003CAB4 /* LeveyTabBarController.m */,
+			);
+			path = LeveyTabbar;
 			sourceTree = "<group>";
 		};
 		BABA165A1AFBBC51005D1FE7 /* RequestLibraries */ = {
@@ -1191,6 +1214,7 @@
 				02AD49AC1A887D720055F372 /* TestNavigationViewController.m in Sources */,
 				02BB389B1A92E9CD008F61D0 /* SDWebImageCompat.m in Sources */,
 				02373D6D1A87B26600AB64E4 /* MBProgressHUD.m in Sources */,
+				BA8AD8141AFDDB070003CAB4 /* SMAlertView.m in Sources */,
 				BABA16941AFBBC51005D1FE7 /* RSA.m in Sources */,
 				02BB38FB1A92F0B9008F61D0 /* ASIS3BucketRequest.m in Sources */,
 				02BB39441A935CCD008F61D0 /* FMDatabase.m in Sources */,
@@ -1259,6 +1283,7 @@
 				02BB38EF1A92F0B9008F61D0 /* ASIHTTPRequest.m in Sources */,
 				02BB38A11A92E9CD008F61D0 /* UIButton+WebCache.m in Sources */,
 				02BB38921A92E9CD008F61D0 /* SBJsonStreamWriter.m in Sources */,
+				BA8AD81B1AFDDB600003CAB4 /* LeveyTabBar.m in Sources */,
 				02BB395A1A93A36A008F61D0 /* CustomUITextView.m in Sources */,
 				02373D481A879BD300AB64E4 /* LoadMoreTableFooterView.m in Sources */,
 				02373D4B1A879BD300AB64E4 /* PullTableView.m in Sources */,
@@ -1267,6 +1292,7 @@
 				BABA168D1AFBBC51005D1FE7 /* AFURLSessionManager.m in Sources */,
 				BA24D0FB1ABFD77A000F94F8 /* UIButton+EnlargeEdge.m in Sources */,
 				BABA168B1AFBBC51005D1FE7 /* AFURLRequestSerialization.m in Sources */,
+				BA8AD81C1AFDDB600003CAB4 /* LeveyTabBarController.m in Sources */,
 				02AD49B21A887DAA0055F372 /* TestEGOViewController.m in Sources */,
 				BA24D10D1ABFDBD4000F94F8 /* UIViewController+MJPopupViewController.m in Sources */,
 				BA24D10C1ABFDBD4000F94F8 /* MJPopupBackgroundView.m in Sources */,

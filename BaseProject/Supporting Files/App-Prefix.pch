@@ -35,4 +35,7 @@
 //Libs相关
 #import "Libs.h"
 
+//Views相关
+#import "Views.h"
+
 #endif

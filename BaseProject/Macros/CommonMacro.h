@@ -1,26 +1,30 @@
 //
 //  CommonMacro.h
-//  BaseProject
+//  UTeam
 //
 //  Created by HeQingshan－Air on 15/2/8.
 //  Copyright (c) 2015年 HQS. All rights reserved.
 //
 
-#ifndef BaseProject_CommonMacro_h
-#define BaseProject_CommonMacro_h
+#ifndef UTeam_CommonMacro_h
+#define UTeam_CommonMacro_h
 
-//设置View的tag属性
-#define VIEWWITHTAG(_OBJECT, _TAG)    [_OBJECT viewWithTag : _TAG]
-//程序的本地化,引用国际化的文件
-#define MyLocal(x, ...) NSLocalizedString(x, nil)
+//Document路径
+#define Document_path [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
-//G－C－D
-#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+//创建Document文件夹
+#define Create_docmentPath(path) {\
+NSString *documentsDirectory = Document_path;\
+NSFileManager *fileManager = [NSFileManager defaultManager];\
+NSString *testDirectory = [documentsDirectory stringByAppendingPathComponent:path];\
+[fileManager createDirectoryAtPath:testDirectory withIntermediateDirectories:YES attributes:nil]\
+}
 
-//由角度获取弧度 有弧度获取角度
-#define degreesToRadian(x) (M_PI * (x) / 180.0)
-#define radianToDegrees(radian) (radian*180.0)/(M_PI)
+//获取给定字符串和字体的size(单行)
+#define STR_FONT_SIZE(str,font) \
+(IS_IOS7)?[str sizeWithAttributes: @{NSFontAttributeName:font}\
+]:[str sizeWithFont:font]
+
 
 //-------------------获取设备大小-------------------------
 //NavBar高度
@@ -36,18 +40,32 @@
 #define HEIGHT_FULL_SCREEN      ([UIScreen mainScreen].bounds.size.height)
 
 //除导航栏和状态栏外的视图的高度
-#define HEIGHT_FULL_VIEW      ([UIScreen mainScreen].bounds.size.height) - 64
+#define HEIGHT_FULL_VIEW      ([UIScreen mainScreen].bounds.size.height) - NavigationBar_HEIGHT
 
 //获取当前屏幕的高度
-#define kMainScreenHeight ([UIScreen mainScreen].applicationFrame.size.height)
+#define MainScreenHeight [UIScreen mainScreen].applicationFrame.size.height
 
 //获取当前屏幕的宽度
-#define kMainScreenWidth  ([UIScreen mainScreen].applicationFrame.size.width)
+#define MainScreenWidth  [UIScreen mainScreen].applicationFrame.size.width
 
 //自定义工具栏的高度
 #define kHeightToolbar 30.0f
 
 //-------------------获取设备大小-------------------------
+
+//设置View的tag属性
+#define VIEWWITHTAG(_OBJECT, _TAG)    [_OBJECT viewWithTag : _TAG]
+
+//程序的本地化,引用国际化的文件
+#define MyLocal(x, ...) NSLocalizedString(x, nil)
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+
+//由角度获取弧度 有弧度获取角度
+#define degreesToRadian(x) (M_PI * (x) / 180.0)
+#define radianToDegrees(radian) (radian*180.0)/(M_PI)
 
 //----------------------系统----------------------------
 

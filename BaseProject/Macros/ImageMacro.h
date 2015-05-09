@@ -9,6 +9,7 @@
 #ifndef BaseProject_ImageMacro_h
 #define BaseProject_ImageMacro_h
 
+
 //----------------------基本图片方法----------------------------
 
 //读取本地图片
@@ -18,7 +19,7 @@
 #define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
 
 //定义UIImage对象
-#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
+#define ImageNamed(imageName) [UIImage imageNamed:imageName]
 
 //----------------------基本图片方法----------------------------
 

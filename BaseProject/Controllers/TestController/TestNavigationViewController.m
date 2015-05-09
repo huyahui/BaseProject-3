@@ -20,11 +20,12 @@
     // Do any additional setup after loading the view.
     
     UIPlaceHolderTextView *view = [[UIPlaceHolderTextView alloc] initWithFrame:CGRectMake(10, 20, WIDTH_FULL_SCREEN - 20, 100)];
-    view.layer.borderColor = K_CellLineColor.CGColor;
+    UIColor *lineColor = CellLine_Color;
+    view.layer.borderColor = lineColor.CGColor;
     view.layer.borderWidth = 0.5;
     view.font = K_Font_12;
     view.layer.cornerRadius = 8;
-    view.textColor = K_NavTitleColor;
+    view.textColor = Navigation_Title_Color;
     view.placeholder = @"This is a test";
     [self.view addSubview:view];
 }

@@ -1,36 +1,23 @@
 //
 //  UIBaseViewController.h
-//  BaseProject
+//  UTeam
 //
 //  Created by HeQingshan－Air on 15/2/8.
 //  Copyright (c) 2015年 HQS. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum
-{
-    BarButtonItemTypeLeftArrow = 0, //左邊有箭頭
-    BarButtonItemTypeRightArrow,    //右边有箭头
-    BarButtonItemTypeRoundrect      //无箭头
-}BarButtonItemType;
-
-typedef enum {
-    BarButtonItemImageTypeLeftArrow = 0, // 左边有箭头
-    BarButtonItemImageTypeRightArrow,    // 右边有箭头
-    BarButtonItemImageTypeRounderct      // 无箭头
-}BarButtonItemImageType;
-
-typedef enum {
-    LeftBarButtonItemTypePop = 0,
-    LeftBarButtonItemTypeCustom
-}LeftBarButtonItemType;
+#import "SMAlertView.h"
+#import "MAppHttp.h"
 
 //所有新建Controller类的基类
 @interface UIBaseViewController : UIViewController {
-    UIBarButtonItem * rightBarBtnItem;
-    UIBarButtonItem * leftBarBtnItem;
+    MAppHttp        *_http;
+    
+    MBProgressHUD   *_mbProgressHud;
+    SMAlertView     *_alarmMessage;
 }
+@property(nonatomic,assign)  BOOL   isPush;  //是否push 进来的
 
 - (NSString *)getLastViewController;
 
@@ -42,16 +29,22 @@ typedef enum {
  */
 -(UIView*)emptyViewWithFrame:(CGRect)frame image:(NSString *)imageName title:(NSString*)title desc:(NSString*)desc;
 
-//导航栏左右按钮的设置
-- (void)setLeftBarButtionItemWithImageType:(BarButtonItemImageType)_barButtonItemImageType barButtonItemType:(LeftBarButtonItemType)_barButtonItemType;
-- (void)setLeftBarButtonItemWithTitle:(NSString *)_btnTitle;
-- (void)setLeftBarButtonItemWithImage:(NSString *)imageStr highlight:(NSString *)highlightImageStr;
-- (void)setRightBarButtionItemWithTitle:(NSString *)_btnTitle;
-- (void)setRightBarButtionItemWithImage:(NSString *)imageStr highlight:(NSString *)highlightImageStr;
+//导航栏左按钮的设置
+- (void)setLeftBarButtonItemWithTitle:(NSString *)_btnTitle target:(SEL)target;
+- (void)setLeftBarButtonItemWithImage:(NSString *)imageStr highlight:(NSString *)highlightImageStr target:(SEL)target;
 
-//左右按钮的响应事件
-- (void)btnUpInside_pop:(id)sender;
-- (void)rightBarBtnItemClick:(id)sender;
-- (void)leftBarBtnItemClick:(id)sender;
+//创建右导航栏按钮
+- (void)setRightBarButtionItemWithTitle:(NSString *)_btnTitle target:(SEL)target;
+- (void)setRightBarButtionItemWithImage:(NSString *)imageStr highlight:(NSString *)highlightImageStr target:(SEL)target;
+
+//即将返回按钮事件处理，可被重写
+-(void)willBack;
+
+//获取Http请求对象
+-(MAppHttp *)getHttpObject;
+
+//网络请求加载动画的现实和关闭
+-(void)hudShow:(UIView *)inView msg:(NSString *)msgText;
+-(void)hudClose;
 
 @end

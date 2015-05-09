@@ -12,7 +12,6 @@
 #import "CommonMacro.h"
 #import "FontMacro.h"
 #import "ColorMacro.h"
-#import "APIMacro.h"
 #import "ImageMacro.h"
 
 #endif
